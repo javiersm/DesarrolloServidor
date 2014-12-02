@@ -1,0 +1,168 @@
+*{
+	margin:0px;
+	padding:0px;
+	text-decoration: none;
+}
+/************
+	CLASES
+*************/
+.alignRight{text-align: right;}
+.alignLeft{text-align:left;}
+.alignCenter{text-align: center;}
+.clear{clear: both;}
+.oculto{ display:none;}
+.bordeError{box-shadow: 0px 0px 3px red;}
+.borderojo{border: 1px solid red;}
+.iniciarcompra, .iniciarCompra a{ display:block; margin:0 auto; width:150px; color: #EC1B23;  text-align: center; padding-top:100px}
+.iniciarCompra a:hover{text-decoration: underline;}
+.formalizar{margin: 15px auto; width: 400px;}
+.formalizar a{	background-color: #B7D84B; border-color: #B7D84B; color:white; padding: 6px 10px 6px 10px; border-radius: 10px;}
+
+table{ font-size: 0.9em;  width: 90%; border-collapse: collapse; margin:0px auto; padding-top: 10px;  border:none;}
+table tr{border-bottom: 1px solid #e5e5e5;}
+table tr th{ border-bottom:1px solid blue; border:none; font-weight:bold;	color: black; padding: 5px; }
+table tr td{ padding:3px 3px 3px 3px; border-bottom:1px solid blue; border:none; color: gray; text-align: center;}
+table tr td a{ color: black;}	
+table tr td a:ACTIVE{ color:black;}
+table.table tbody tr:nth-child(odd) {background: #F5F5F5; },
+table.table tbody tr:nth-child(even) {background: #FFF;}
+table.table tbody tr:hover{	background-color: rgba(120,120,120,0.3); color:white; }
+
+
+
+form#prestamoDevolucion{font-size:1em;	width: 400px; padding: 10px; background-color: transparent; margin: 0 auto; padding-top:40px;}
+form#prestamoDevolucion table, form#prestamoDevolucion table tr, form#prestamoDevolucion table tr td{ border: none; background-color: transparent; padding-bottom: 5px;}
+form#prestamoDevolucion table tr th{ width: 190px; color: #666; border: none; text-align: right; margin-right: 10px; background-color: transparent;}
+form#prestamoDevolucion table tr td input{width:200px; margin:0; padding: 0; }
+form#prestamoDevolucion table tr td input.btnEnviar{position:relative; left:-120px; margin-left: 0px;padding:3px; color: #666; width: auto; margin-top:3px;}
+.btnEnviar{
+	width:80px;
+	height: 100%;
+	padding: 3px;
+	color: white;
+	cursor:pointer;
+	background-color: silver;
+	border-color: silver;
+	padding-left: 90px;
+	text-align: right;
+}
+.btnEnviar:hover{
+	width:80px;
+	height: 100%;
+	padding: 3px;
+	color:white;
+	background-color: silver;
+	border-color: silver;
+	text-align: right;
+}
+
+
+/************
+	GENERALES
+*************/
+h2{text-align: center; padding:20px 5px 10px 5px;}
+header{
+	height: 100px;
+}
+header div#infosuperior{
+	height: 36px; 
+	background-color: #F5F5F5;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #e5e5e5;}
+
+div.logo{
+	background-image: url("../images/mm-logo.png");
+	background-repeat: no-repeat;
+	 margin: 20px 0 20px 30px;
+	 background-size: 400px auto;
+	 height: 60px;
+	 width: 400px;
+	 display: inline-block;
+}
+
+
+div.shoppingCart{
+	background-image: url("../images/cart.png");
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	float:right;
+	margin: 25px 130px 0px 0px;	
+}
+div.shoppingCart:hover{
+	cursor: pointer;
+}
+nav{
+	display: block;
+	height: 44px;
+	background-color: #F5F5F5;
+	margin-top: 46px;
+	border-bottom: 1px solid #e5e5e5;
+	border-top: 1px solid #f7f7f7;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+
+}
+nav ul{list-style: none;}
+
+nav ul li{
+	float: left;
+	font: 1em sans-serif;
+	margin-left: 45%;
+	text-align: center;
+ 	vertical-align: text-bottom;
+ 	padding-top: 10px;
+}
+
+nav ul li a{
+	color: black;
+	font-size: 1.1em;
+	font-weight: bold;
+	 vertical-align: text-bottom;
+}
+
+
+div#bg-skin{
+	clear: both;
+	background-image: url(../images/bg-skin.jpg);
+	background-repeat: no-repeat;	
+	height: 600px;
+	margin-top: 60px;
+}
+
+div.contenido{
+	position: relative;
+	bottom: 590px;
+	background-color: white;
+	min-height: 400px;
+	width: 995px;
+	margin: 0 auto;
+	z-index: 5;
+}
+
+div.producto{height: 300px; width: 995px;position:relative; padding: 20px 20px 20px 70px; border-bottom: 1px solid silver; }
+div.producto .panelderecho{
+	position: absolute;
+	width: 300px;
+	left: 600px;
+	bottom: 110px;
+}
+div.producto .panelderecho input, div.producto .panelderecho img{display: block;padding:20px; margin:0 auto;}
+
+
+div.producto input.anadirCarro{
+	background-color: #F10000;
+	padding: 10px;
+	cursor: pointer;
+	color: white;
+	font: 1.2em sans-serif bold;
+}
+
+
+footer{
+	background-color: black;
+	height: 120px;
+}
