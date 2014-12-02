@@ -1,0 +1,12 @@
+<%-- stop the browser from caching the page --%>
+
+<%--Pages with information that changes depending on whether or not there is a known user 
+should not be cached by the browser. In this example an include file inc/nobrowsercache.jspf 
+is used to send the HTTP headers that stop the browser from caching the page. 
+It is used for each page that shows the button bar at the top, 
+because the button bar changes depending on whether or not the user is logged in. --%>
+<%
+  response.setHeader("Cache-Control","no-cache,post-check=0,pre-check=0");
+  response.setHeader("Pragma","no-cache");
+  response.setHeader("Expires","Thu,01Dec199416:00:00GMT");
+%>

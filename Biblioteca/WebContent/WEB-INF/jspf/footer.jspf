@@ -1,0 +1,3 @@
+<footer>
+	<p>Biblioteca Virtual (c)		<span>Usuarios Conectados: <%= listeners.SessionCounterListener.getTotalActiveSessions()%></span></p>
+</footer>

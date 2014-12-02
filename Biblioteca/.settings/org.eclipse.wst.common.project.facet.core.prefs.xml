@@ -1,0 +1,7 @@
+<root>
+  <facet id="jst.jstl">
+    <node name="libprov">
+      <attribute name="provider-id" value="glassfish-system-library-provider-jstl"/>
+    </node>
+  </facet>
+</root>

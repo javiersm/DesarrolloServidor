@@ -1,0 +1,58 @@
+<%@ include file="/WEB-INF/jspf/nobrowsercache.jspf" %>
+
+<header>
+		<c:if test="${not empty pageContext.request.userPrincipal}">
+		<div class="usuario">
+			<p>Bienvenido:<strong><c:out value=" ${pageContext.request.userPrincipal.name}" default="Invitado"></c:out></strong>   </p>
+			<c:if test="<%=request.isUserInRole("administrativos") %>">
+				<p class="cerrarsesion"><a href="/Biblioteca/admin/panelAdministrador.jsp">Administrar</a></p>
+			</c:if>
+			<p class="cerrarsesion"><a href="/Biblioteca/controller?operacion=cerrarsession">cerrar sesion</a></p>
+		</div>
+		</c:if>
+</header>
+<div class="clear"></div>
+<nav>
+	<ul>
+		<li class="nivel1">
+			<a href="/Biblioteca/socios/home.jsp" class="nivel1">Inicio</a> 
+		</li>
+		<li class="nivel1"><a href="#" class="nivel1">Socios</a> 
+			<ul>
+				<li><a href="/Biblioteca/controller?operacion=listadosocios&pag=0">Listado</a></li>
+				<li><a href="/Biblioteca/controller?operacion=listadomorosos">Morosos</a></li>
+				<c:if test="<%=request.isUserInRole("administrativos") %>">
+					<li><a href="/Biblioteca/admin/socios/getsociobyname.jsp">Modificar</a></li>
+					<li><a href="/Biblioteca/admin/socios/penalizacion.jsp">Penalizacion</a></li>
+				</c:if>
+			</ul> 
+		</li>
+		<li class="nivel1"><a href="#" class="nivel1">Autores</a> 
+			<ul>
+				<li><a href="/Biblioteca/controller?operacion=listadoautores">Listado</a></li>
+				<c:if test="<%=request.isUserInRole("administrativos") %>">
+					<li><a href="/Biblioteca/admin/autores/agregarautor.jsp">Agregar</a></li>
+				</c:if>
+			</ul> 
+		</li>
+		<li class="nivel1"><a href="#" class="nivel1">Libros</a> 
+			<ul>
+				<li><a href="/Biblioteca/socios/libros/consulta.jsp">Buscar</a></li>
+				<li><a href="/Biblioteca/socios/prestamos/buscarejemplares.jsp">Ejemplares Disponibles</a></li>
+				<li><a href="/Biblioteca/socios/prestamos/solicitarprestamo.jsp">Solicitar Ejemplar</a></li>
+				<li><a href="/Biblioteca/socios/prestamos/devolverejemplar.jsp">Devolver Ejemplar</a></li>
+				<c:if test="<%=request.isUserInRole("administrativos") %>">	
+					<li><a href="/Biblioteca/admin/libros/borrarejemplar.jsp">Borrar Ejemplar</a></li> 
+				</c:if>
+			</ul> 
+		</li>
+		
+	
+		
+		<li class="nivel1"><a href="/Biblioteca/contacto.jsp" class="nivel1">Contacto</a> 
+	
+		</li>
+			
+	</ul>
+</nav>
+<div class="clear"></div>

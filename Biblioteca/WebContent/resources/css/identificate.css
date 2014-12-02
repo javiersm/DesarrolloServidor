@@ -1,0 +1,45 @@
+/***************
+	LOGIN IDENTIFICATE
+******************/ 
+
+.identificate{	width: 450px; margin: 50px auto;}
+.identificate .centrado{ width: 450px; margin: 30px; }
+
+.identificate fieldset{
+	background-color: #EDEEEE;
+	border: 1px solid silver;
+	box-shadow: 0px 0px 2px #888888;	
+}
+.identificate fieldset legend{
+	font: 1em  Verdana,Arial,Helvetica,sans-serif;
+	color: white;
+	background-color: #426DAB;
+	padding: 5px 10px 5px 10px;
+	margin-left: -2px;}
+	
+.identificate table{width: 100%; border:none;}
+.identificate .centrado table tr, .identificate .centrado table tr th{text-align: right; border:none;}
+.identificate .centrado table tr td{	padding-bottom: 5px; border:none;}
+.identificate span.error{	color: red; font-size: 0.9em; font-style: italic; background-color: #2929; padding-left: 40px; color: #ff0000; vertical-align: text-bottom;}
+
+
+
+.identificate input#btnRegistrate {
+	font: 1em  Verdana,Arial,Helvetica,sans-serif;
+	color: white;
+	display: block;
+	padding: 5px 10px 5px 10px;
+	margin-top: 10px; 
+	background-color: #426DAB;
+	text-decoration: none;
+	cursor: pointer;
+	border: none;
+}
+input#btnRegistrate:hover{	
+	background-color: #22356B;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+}
+
+
+ 

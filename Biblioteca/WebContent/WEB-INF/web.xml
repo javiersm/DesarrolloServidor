@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Biblioteca</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <realm-name>dominioseguridadbiblioteca</realm-name>
+    <form-login-config>
+      <form-login-page>/identificate.jsp?login_error=0</form-login-page>
+      <form-error-page>/identificate.jsp?login_error=1</form-error-page>
+    </form-login-config>
+  </login-config>
+  <security-role>
+    <description>Rol socios</description>
+    <role-name>socios</role-name>
+  </security-role>
+  <security-role>
+    <description>Rol administrativos</description>
+    <role-name>administrativos</role-name>
+  </security-role>
+  <security-constraint>
+    <display-name>CARPETA SOCIOS</display-name>
+    <web-resource-collection>
+      <web-resource-name>CARPETA SOCIOS</web-resource-name>
+      <url-pattern>/socios/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>socios</role-name>
+      <role-name>administrativos</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-constraint>
+    <display-name>PAGINAS ADMINISTRATIVAS</display-name>
+    <web-resource-collection>
+      <web-resource-name>PAGINAS ADMINISTRATIVAS</web-resource-name>
+      <url-pattern>/admin/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>administrativos</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-constraint>
+    <display-name>Controlador General</display-name>
+    <web-resource-collection>
+      <web-resource-name>Controlador</web-resource-name>
+      <url-pattern>/controller</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>administrativos</role-name>
+      <role-name>socios</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-constraint>
+    <display-name>Controlador Administradores</display-name>
+    <web-resource-collection>
+      <web-resource-name>Controlador Administradores</web-resource-name>
+      <url-pattern>/controllerAdmin</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>administrativos</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <session-config>
+    <session-timeout>45</session-timeout>
+  </session-config>
+  <listener>
+    <listener-class>listeners.SessionCounterListener</listener-class>
+  </listener>
+</web-app>
